@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="483.0" maxWidth="483.0" minHeight="483.0" minWidth="483.0" prefHeight="483.0" prefWidth="483.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kolkoikrzyzyk.MainController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+      <RowConstraints maxHeight="23.0" minHeight="23.0" prefHeight="23.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+   <children>
+      <Label fx:id="l1" alignment="CENTER" contentDisplay="CENTER" maxHeight="145.0" maxWidth="154.0" minHeight="145.0" minWidth="154.0" onMouseClicked="#onCickMouse" prefHeight="145.0" prefWidth="154.0" style="-fx-background-color: green;" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <font>
+            <Font size="96.0" />
+         </font></Label>
+      <Label fx:id="l5" alignment="CENTER" maxHeight="145.0" maxWidth="154.0" minHeight="145.0" minWidth="154.0" onMouseClicked="#onCickMouse" prefHeight="145.0" prefWidth="154.0" style="-fx-background-color: green;" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <font>
+            <Font size="96.0" />
+         </font></Label>
+      <Label fx:id="l2" alignment="CENTER" contentDisplay="CENTER" maxHeight="145.0" maxWidth="154.0" minHeight="145.0" minWidth="154.0" onMouseClicked="#onCickMouse" prefHeight="145.0" prefWidth="154.0" style="-fx-background-color: green;" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <font>
+            <Font size="96.0" />
+         </font></Label>
+      <Label fx:id="l3" alignment="CENTER" contentDisplay="CENTER" maxHeight="145.0" maxWidth="154.0" minHeight="145.0" minWidth="154.0" onMouseClicked="#onCickMouse" prefHeight="145.0" prefWidth="154.0" style="-fx-background-color: green;" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <font>
+            <Font size="96.0" />
+         </font></Label>
+      <Label fx:id="l4" alignment="CENTER" contentDisplay="CENTER" maxHeight="145.0" maxWidth="154.0" minHeight="145.0" minWidth="154.0" onMouseClicked="#onCickMouse" prefHeight="145.0" prefWidth="154.0" style="-fx-background-color: green;" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <font>
+            <Font size="96.0" />
+         </font></Label>
+      <Label fx:id="l6" alignment="CENTER" contentDisplay="CENTER" maxHeight="145.0" maxWidth="154.0" minHeight="145.0" minWidth="154.0" onMouseClicked="#onCickMouse" prefHeight="145.0" prefWidth="154.0" style="-fx-background-color: green;" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <font>
+            <Font size="96.0" />
+         </font></Label>
+      <Label fx:id="l7" alignment="CENTER" contentDisplay="CENTER" maxHeight="145.0" maxWidth="154.0" minHeight="145.0" minWidth="154.0" onMouseClicked="#onCickMouse" prefHeight="145.0" prefWidth="154.0" style="-fx-background-color: green;" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+         <font>
+            <Font size="96.0" />
+         </font></Label>
+      <Label fx:id="l8" alignment="CENTER" contentDisplay="CENTER" maxHeight="145.0" maxWidth="154.0" minHeight="145.0" minWidth="154.0" onMouseClicked="#onCickMouse" prefHeight="145.0" prefWidth="154.0" style="-fx-background-color: green;" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+         <font>
+            <Font size="96.0" />
+         </font></Label>
+      <Label fx:id="l9" alignment="CENTER" contentDisplay="CENTER" maxHeight="145.0" maxWidth="154.0" minHeight="145.0" minWidth="154.0" onMouseClicked="#onCickMouse" prefHeight="145.0" prefWidth="154.0" style="-fx-background-color: green;" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+         <font>
+            <Font size="96.0" />
+         </font></Label>
+      <Label fx:id="koniec" maxHeight="0.0" maxWidth="0.0" minHeight="0.0" minWidth="0.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="0.0" prefWidth="0.0" GridPane.rowIndex="3" />
+      <MenuBar minHeight="23.0" prefHeight="23.0" GridPane.columnSpan="3">
+        <menus>
+          <Menu mnemonicParsing="false" text="Gra">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onClickNewGame" text="nowa gra" />
+                  <MenuItem mnemonicParsing="false" onAction="#onClickExit" text="wyjście" />
+            </items>
+          </Menu>
+          <Menu fx:id="Pomoc" mnemonicParsing="false" text="Pomoc">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</GridPane>
