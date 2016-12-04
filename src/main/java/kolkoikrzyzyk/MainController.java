@@ -1,7 +1,6 @@
 package kolkoikrzyzyk;
 
 
-
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -36,11 +35,9 @@ public class MainController {
     private Label l9;
     @FXML
     private Label koniec;  //element łączący model z controllerem. Za jakego pomocą steruje zakonczenie grą
-                           //w widoku nie jest widoczny, jego rozmiar to 0
+    //w widoku nie jest widoczny, jego rozmiar to 0
 
     private Model model = new Model();              //utworzenie instancji klas Model
-
-
 
 
     @FXML
@@ -49,11 +46,12 @@ public class MainController {
 
         model.nowaGra();
 
-       Label label[] = {l1,l2,l3,l4,l5,l6,l7,l8,l9};                 //zgrupowanie wszystkich wstrzyknietych labeli w tablie
+        Label label[] = {l1, l2, l3, l4, l5, l6, l7, l8, l9};                 //zgrupowanie wszystkich wstrzyknietych labeli w tablie
 
         int i = 0;
-        for(Label x:label){                                          //bindowanie tablicy label z lista Propertisow z klasy Model
-            x.textProperty().bindBidirectional(model.plansza.get(i));
+        for (Label x : label) {                                          //bindowanie tablicy label z lista Propertisow z klasy Model
+
+            x.textProperty().bindBidirectional(model.getPlansza().get(i));
             i++;
         }
 
@@ -61,7 +59,8 @@ public class MainController {
 
         koniec.textProperty().addListener((observable, oldValue, newValue) -> {           //nalozenie listenera na niewidoczny label
             if (newValue.equals("remis")) {                                               //dzieki niemu mozna uaktualniac dane w kontrolerze
-                for (Label x : label) x.setDisable(true);                                 //w zaleznosci od wartosci neWValue jest podejmowana konkretna akcja
+                for (Label x : label)
+                    x.setDisable(true);                                 //w zaleznosci od wartosci neWValue jest podejmowana konkretna akcja
             } else if (newValue.equals("") == false) {
                 label[Character.getNumericValue(newValue.charAt(0))].setTextFill(Color.RED);
                 label[Character.getNumericValue(newValue.charAt(1))].setTextFill(Color.RED);
@@ -71,21 +70,21 @@ public class MainController {
             }
         });
 
-        if(l1.isDisable()==true)for(Label x:label){              //jesli pierwszy z guzikow jest Disable to oznacza ze gra jest
-            x.setDisable(false);                                 //uruchomiona od nowa i trzeba wlaczyc wszystkie guziki oraz
-            x.setTextFill(Color.BLACK);                          //zmienic czionke spowrotem na black
-        }
+        if (l1.isDisable() == true)
+            for (Label x : label) {              //jesli pierwszy z guzikow jest Disable to oznacza ze gra jest
+                x.setDisable(false);                                 //uruchomiona od nowa i trzeba wlaczyc wszystkie guziki oraz
+                x.setTextFill(Color.BLACK);                          //zmienic czionke spowrotem na black
+            }
 
 
+    }
 
-}
 
-
-    public void onCickMouse(MouseEvent e){                       //metoda obslugujca klikniecie myszy w dany label
+    public void onCickMouse(MouseEvent e) {                       //metoda obslugujca klikniecie myszy w dany label
         Label label = (Label) e.getSource();                     //zamiana obieku e na obiek typu Label
         String id = label.getId();                               //uzyskanie id konkretnego kliknietegoa labela
 
-        switch(id){                                              //w zalesnosci od wartosci zmiennej id zmiennej KtorePole z klasy Model
+        switch (id) {                                              //w zalesnosci od wartosci zmiennej id zmiennej KtorePole z klasy Model
             case "l1":                                           //przypisywana jest konkretna wartosc
                 model.setKtorePole(0);
                 break;
@@ -117,16 +116,7 @@ public class MainController {
         model.graj();                  //uruchomienie moetody graj z klasy MOdel
 
 
-
-
-
-
-
-
     }
-
-
-
 
 
     public void onClickExit(ActionEvent actionEvent) {            //metoda obsluguje wyjscie z gornego menu
