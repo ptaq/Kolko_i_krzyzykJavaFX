@@ -2,7 +2,6 @@ package kolkoikrzyzyk;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import javafx.scene.control.Label;
 
 import java.util.ArrayList;
 

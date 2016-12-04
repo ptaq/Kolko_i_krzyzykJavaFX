@@ -4,19 +4,12 @@ package kolkoikrzyzyk;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.GridPane;
-import javafx.scene.paint.*;
+
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Ellipse;
 
-
-import java.awt.*;
-import java.util.ArrayList;
 
 /**
  * Created by ptaq on 30.11.2016.
